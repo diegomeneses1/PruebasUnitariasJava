@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+}
+
+group 'IngenieriaSoftware'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    //mavenCentral()
+    maven { url "https://artifactory.apps.bancolombia.com/maven-bancolombia" }
+    jcenter { url  "https://artifactory.apps.bancolombia.com:80/jcenter/"}
+    maven { url  "https://artifactory.apps.bancolombia.com:80/global-bancolombia/"}
+}
+
+dependencies {  
+    //testImplementation group: 'junit', name: 'junit', version: '4.13'
+    testCompile group: 'junit', name: 'junit', version: '4.13'
+}
+
