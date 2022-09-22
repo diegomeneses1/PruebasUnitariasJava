@@ -19,6 +19,7 @@ public class SumadorTest {
 
         //  Assert
         assertEquals(resultado, resultadoEsperado, 0D);
+
     }
 
     @Test
