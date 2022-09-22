@@ -9,7 +9,7 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-    //mavenCentral()
+    mavenCentral()
     maven { url "https://artifactory.apps.bancolombia.com/maven-bancolombia" }
     jcenter { url  "https://artifactory.apps.bancolombia.com:80/jcenter/"}
     maven { url  "https://artifactory.apps.bancolombia.com:80/global-bancolombia/"}
