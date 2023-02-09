@@ -39,7 +39,7 @@ public class MultiplicadorTest {
 
 
     @Test
-    public void excepcionArreglosDiferenteLongitud() throws InvalidOperationException{
+    public void excepcionArreglosDiferenteLongitud(){
         //  Arrange
         Multiplicador multiplicador = new Multiplicador();
         double param1[] = {1.2, 3, 10.1};
@@ -64,7 +64,6 @@ public class MultiplicadorTest {
 
         try {
             multiplicador.multiplicar(param1, param2);
-            //fail("Excepción InvalidOperationException no lanzada");
         } catch (InvalidOperationException e) {
             Assertions.assertEquals(mensajeEsperado, e.getMessage());
         }
