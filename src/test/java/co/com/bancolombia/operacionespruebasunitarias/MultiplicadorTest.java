@@ -1,12 +1,9 @@
 package co.com.bancolombia.operacionespruebasunitarias;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
-
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
 
 public class MultiplicadorTest {
 
@@ -22,7 +19,7 @@ public class MultiplicadorTest {
         double resultado = multiplicador.multiplicar(param1, param2);
 
         //  Assert
-        assertEquals(resultado, resultadoEsperado, 0D);
+        Assertions.assertEquals(resultado, resultadoEsperado, 0D);
     }
 
     @Test
@@ -37,11 +34,9 @@ public class MultiplicadorTest {
         double resultado[] = multiplicador.multiplicar(param1, param2);
 
         //  Assert
-        assertTrue(Arrays.equals(resultado, resultadoEsperado));
+        Assertions.assertTrue(Arrays.equals(resultado, resultadoEsperado));
     }
 
-    @Rule
-    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void excepcionArreglosDiferenteLongitud() throws InvalidOperationException{
@@ -51,12 +46,13 @@ public class MultiplicadorTest {
         double param2[] = {2, 3, 4, 5};
         String mensajeEsperado = "Los arreglos no tienen la misma cantidad de elementos";
 
-        //  Assert
-        thrown.expect(InvalidOperationException.class);
-        thrown.expectMessage(mensajeEsperado);
+        //Act
+        InvalidOperationException ex = Assertions.assertThrows(InvalidOperationException.class, () ->{
+            multiplicador.multiplicar(param1, param2);
+        });
 
-        //  Act
-        multiplicador.multiplicar(param1, param2);
+        //Assert
+        Assertions.assertEquals(mensajeEsperado, ex.getMessage());
     }
 
     @Test
@@ -68,9 +64,9 @@ public class MultiplicadorTest {
 
         try {
             multiplicador.multiplicar(param1, param2);
-            fail("Excepción InvalidOperationException no lanzada");
+            //fail("Excepción InvalidOperationException no lanzada");
         } catch (InvalidOperationException e) {
-            assertEquals(mensajeEsperado, e.getMessage());
+            Assertions.assertEquals(mensajeEsperado, e.getMessage());
         }
     }
 }

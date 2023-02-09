@@ -1,9 +1,8 @@
 package co.com.bancolombia.operacionespruebasunitarias;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
 
 public class UtilidadesTest {
 
@@ -17,7 +16,7 @@ public class UtilidadesTest {
         boolean resultado = utilidades.esPrimo(param);
 
         //  Assert
-        assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
 
     @Test
@@ -30,7 +29,7 @@ public class UtilidadesTest {
         boolean resultado = utilidades.esPrimo(param);
 
         //  Assert
-        assertTrue(resultado);
+        Assertions.assertTrue(resultado);
     }
 
     @Test
@@ -43,7 +42,7 @@ public class UtilidadesTest {
         boolean resultado = utilidades.esPrimo(param);
 
         //  Assert
-        assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
 
     @Test
@@ -56,7 +55,7 @@ public class UtilidadesTest {
         boolean resultado = utilidades.esPrimo(param);
 
         //  Assert
-        assertTrue(resultado);
+        Assertions.assertTrue(resultado);
     }
 
     @Test
@@ -69,7 +68,7 @@ public class UtilidadesTest {
         boolean resultado = utilidades.esPrimo(param);
 
         //  Assert
-        assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
 
     @Test
@@ -82,7 +81,7 @@ public class UtilidadesTest {
         boolean resultado = utilidades.esNegativo(param);
 
         //  Assert
-        assertTrue(resultado);
+        Assertions.assertTrue(resultado);
     }
 
     @Test
@@ -95,7 +94,7 @@ public class UtilidadesTest {
         boolean resultado = utilidades.esNegativo(param);
 
         //  Assert
-        assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
 
     @Test
@@ -108,7 +107,7 @@ public class UtilidadesTest {
         boolean resultado = utilidades.esNegativo(param);
 
         //  Assert
-        assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
 
     @Test
@@ -121,7 +120,7 @@ public class UtilidadesTest {
         boolean resultado = utilidades.esPositivo(param);
 
         //  Assert
-        assertTrue(resultado);
+        Assertions.assertTrue(resultado);
     }
 
     @Test
@@ -134,7 +133,7 @@ public class UtilidadesTest {
         boolean resultado = utilidades.esPositivo(param);
 
         //  Assert
-        assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
 
     @Test
@@ -147,6 +146,6 @@ public class UtilidadesTest {
         boolean resultado = utilidades.esPositivo(param);
 
         //  Assert
-        assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
 }

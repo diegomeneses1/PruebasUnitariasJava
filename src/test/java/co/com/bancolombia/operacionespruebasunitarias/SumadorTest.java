@@ -1,8 +1,8 @@
 package co.com.bancolombia.operacionespruebasunitarias;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
 
 public class SumadorTest {
 
@@ -18,7 +18,7 @@ public class SumadorTest {
         double resultado = sumador.sumar(param1, param2);
 
         //  Assert
-        assertEquals(resultado, resultadoEsperado, 0D);
+        Assertions.assertEquals(resultado, resultadoEsperado, 0D);
 
     }
 
@@ -33,7 +33,7 @@ public class SumadorTest {
         double resultado = sumador.sumar(param);
 
         //  Assert
-        assertEquals(resultado, resultadoEsperado, 0D);
+        Assertions.assertEquals(resultado, resultadoEsperado, 0D);
     }
 
 }
