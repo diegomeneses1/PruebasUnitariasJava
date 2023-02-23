@@ -12,15 +12,15 @@ public class Principal {
             Multiplicador multiplicador = new Multiplicador();
             Divisor divisor = new Divisor();
 
-            int digito1;
-            int digito2;
+            double digito1;
+            double digito2;
 
             Scanner leer = new Scanner(System.in);
 
             System.out.println("Ingrese Numero 1: ");
-            digito1 = leer.nextInt();
+            digito1 = leer.nextDouble();
             System.out.println("Ingrese Numero 2: ");
-            digito2 = leer.nextInt();
+            digito2 = leer.nextDouble();
 
             System.out.println("El valor de la suma es: " + sumador.sumar(digito1, digito2));
             System.out.println("El valor de la multiplicacion es: " + multiplicador.multiplicar(digito1, digito2));
